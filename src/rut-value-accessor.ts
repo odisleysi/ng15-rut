@@ -1,8 +1,8 @@
-import { Directive, forwardRef } from '@angular/core';
+import { Directive, Renderer2, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { rutFormat } from 'rut-helpers';
 
-import { ElementRef, Renderer } from '@angular/core';
+import { ElementRef } from '@angular/core';
 
 const RUT_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -20,16 +20,16 @@ const RUT_VALUE_ACCESSOR: any = {
 })
 export class RutValueAccessor implements ControlValueAccessor {
   constructor(
-    private renderer: Renderer,
+    private renderer: Renderer2,
     private elementRef: ElementRef,
     ) { }
 
-  public onChange: any = (_) => { /*Empty*/ };
+  public onChange: any = () => { /*Empty*/ };
   public onTouched: any = () => { /*Empty*/ };
 
   public writeValue(value: any): void {
     let normalizedValue: string = rutFormat(value) || '';
-    this.renderer.setElementProperty(this.elementRef.nativeElement, 'value', normalizedValue);
+    this.renderer.setProperty(this.elementRef.nativeElement, 'value', normalizedValue);
   }
 
   public registerOnChange(fn: (_: any) => void): void { this.onChange = fn; }
