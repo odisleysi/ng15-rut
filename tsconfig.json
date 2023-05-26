@@ -1,19 +1,40 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "emitDecoratorMetadata": true,
+    "module": "ES2022",
+    "target": "ES2022",
     "experimentalDecorators": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "moduleResolution": "node",
-    "declaration": true,
-    "outDir": "./dist",
-    "lib": ["dom", "es6"]
+    "declaration": false,
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "useDefineForClassFields": false,
+    "outDir": "./dist/out-tsc",
+    "lib": [
+      "ES2022",
+      "dom"
+    ]
   },
-  "files": [
-    "src/ng2-rut.module.ts"
-  ],
   "angularCompilerOptions": {
-    "genDir": "compiled"
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "paths": {
+    "@app/*": ["./app/*"],
+    "@assets/*": ["./assets/*"],
+    "@components/*": ["./components/*"],
+    "@styles/*": ["./styles/*"],
+    "@utils/*": ["./utils/*"]
   }
 }
