@@ -6,6 +6,7 @@ import { RutValidator } from './rut.validator';
 import { RutDirective } from './rut.directive';
 import { RutValueAccessor } from './rut-value-accessor';
 
+
 export { RutPipe } from './rut.pipe';
 export { RutValidator } from './rut.validator';
 export { RutDirective } from './rut.directive';
@@ -18,7 +19,7 @@ export { RutDirective } from './rut.directive';
     RutPipe,
     RutDirective,
     RutValidator,
-    RutValueAccessor,
+    RutValueAccessor
   ],
   providers: [
     RutValidator,
@@ -30,4 +31,4 @@ export { RutDirective } from './rut.directive';
     RutValueAccessor,
   ],
 })
-export class Ng2Rut {}
+export class Ng15Rut {}

@@ -9,8 +9,8 @@
   <label for="rut">RUT</label>
   <input [(ngModel)]="user.rut" name="rut" #rut="ngModel" validateRut formatRut required>
   <ul [hidden]="rut.valid || rut.pristine">
-    <li *ngIf="rut.errors && rut.errors.required">Required</li>
-    <li *ngIf="rut.errors && rut.errors.invalidRut">Invalid</li>
+    <li *ngIf="rut.errors && rut.errors['required']">Required</li>
+    <li *ngIf="rut.errors && rut.errors['invalidRut']">Invalid</li>
   </ul>
   <br>
   <br>
@@ -20,10 +20,10 @@
 <h3>Reactive Form</h3>
 <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm)">
   <label for="rut">RUT</label>
-  <input type="text" id="reactiveRut" placeholder="Ingresa el RUT" [formControl]="reactiveForm.controls.rut" formatRut>
-  <ul [hidden]="reactiveForm.controls.rut.valid || reactiveForm.controls.rut.pristine">
-    <li *ngIf="reactiveForm.controls.rut.errors && reactiveForm.controls.rut.errors.required">Required</li>
-    <li *ngIf="reactiveForm.controls.rut.errors && reactiveForm.controls.rut.errors.invalidRut">Invalid</li>
+  <input type="text" id="reactiveRut" placeholder="Ingresa el RUT" formControlName="rut" formatRut>
+  <ul [hidden]="reactiveForm.controls['rut'].valid || reactiveForm.controls['rut'].pristine">
+    <li *ngIf="reactiveForm.controls['rut'].errors && reactiveForm.controls['rut'].errors['required']">Required</li>
+    <li *ngIf="reactiveForm.controls['rut'].errors && reactiveForm.controls['rut'].errors['invalidRut']">Invalid</li>
   </ul>
   <br>
   <br>

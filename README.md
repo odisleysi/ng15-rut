@@ -1,32 +1,32 @@
 Angular 2 RUT
 =============
 
-Angular 2 library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
+Angular 15 library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
 
 ## Installation
 
 ```bash
-yarn add ng2-rut
+yarn add ng15-rut
 # or
-npm install ng2-rut --save
+npm install ng15-rut --save
 ```
 
 ## Usage
 
 ### Set-up:
 
-The easiest way to use this library is to import Ng2Rut in your app's main module.
+The easiest way to use this library is to import Ng15Rut in your app's main module.
 
 ```typescript
 import { NgModule } from '@angular/core';
-import { Ng2Rut } from 'ng2-rut';
+import { Ng15Rut } from 'ng15-rut';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   ...
   imports: [
     BrowserModule,
-    Ng2Rut
+    Ng15Rut
   ],
 })
 class DemoAppModule { }
@@ -36,7 +36,7 @@ See `./demo` folder for a fully working example.
 
 ### Using it:
 
-ng2-rut exposes multiple features that can be used to perform input validation and formatting. Probably you want to use one of the following:
+ng15-rut exposes multiple features that can be used to perform input validation and formatting. Probably you want to use one of the following:
 
 - `RutValidator`: Exposes the `validateRut` directive (to attach to models or inputs) and the RutValidator class to be used as `Validator` on reactive forms.
 - `RutPipe`: Exposes the `RutPipe` pipe to format rut numbers on templates
@@ -94,12 +94,12 @@ export class DemoAppComponent {
 
 ## Credits
 
-Thank you [contributors](https://github.com/platanus/ng2-rut/graphs/contributors)!
+Thank you [contributors](https://github.com/odisleysi/ng15-rut/graphs/contributors)!
 
-<img src="http://platan.us/gravatar_with_text.png" alt="Platanus" width="250"/>
+<img src="https://avatars.githubusercontent.com/u/18350564?v=4" alt="Odisleysi" width="250"/>
 
-ng2-rut is maintained by [platanus](http://platan.us).
+ng15-rut is maintained by [odisleysi](https://github.com/odisleysi).
 
 ## License
 
-Angular 2 RUT is © 2016 Platanus, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
+Angular 15 RUT is © 2023 GDExpress, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
