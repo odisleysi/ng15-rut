@@ -1,14 +1,14 @@
 Angular 2 RUT
 =============
 
-Angular 15 library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
+Angular 16 library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
 
 ## Installation
 
 ```bash
-yarn add ng15-rut
+yarn add ng16-rut
 # or
-npm install ng15-rut --save
+npm install ng16-rut --save
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ The easiest way to use this library is to import Ng15Rut in your app's main modu
 
 ```typescript
 import { NgModule } from '@angular/core';
-import { Ng15Rut } from 'ng15-rut';
+import { Ng16Rut } from 'ng16-rut';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
@@ -36,7 +36,7 @@ See `./demo` folder for a fully working example.
 
 ### Using it:
 
-ng15-rut exposes multiple features that can be used to perform input validation and formatting. Probably you want to use one of the following:
+ng16-rut exposes multiple features that can be used to perform input validation and formatting. Probably you want to use one of the following:
 
 - `RutValidator`: Exposes the `validateRut` directive (to attach to models or inputs) and the RutValidator class to be used as `Validator` on reactive forms.
 - `RutPipe`: Exposes the `RutPipe` pipe to format rut numbers on templates
@@ -98,7 +98,7 @@ Thank you [contributors](https://github.com/odisleysi/ng15-rut/graphs/contributo
 
 <img src="https://avatars.githubusercontent.com/u/18350564?v=4" alt="Odisleysi" width="250"/>
 
-ng15-rut is maintained by [odisleysi](https://github.com/odisleysi).
+ng16-rut is maintained by [odisleysi](https://github.com/odisleysi).
 
 ## License
 

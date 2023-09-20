@@ -11,6 +11,11 @@
     "baseUrl": "./",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "paths": {
+      "ng16-rut": [
+        "dist/ng16-rut"
+      ]
+    },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
