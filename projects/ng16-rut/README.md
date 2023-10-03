@@ -1,24 +1,105 @@
-# Ng16Rut
+Angular 16 RUT
+=============
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+Angular 16 library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project ng16-rut` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng16-rut`.
-> Note: Don't forget to add `--project ng16-rut` or else it will be added to the default project in your `angular.json` file. 
+```bash
+yarn add ng16-rut
+# or
+npm install ng16-rut --save
+```
 
-## Build
+## Usage
 
-Run `ng build ng16-rut` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Set-up:
 
-## Publishing
+The easiest way to use this library is to import Ng16Rut in your app's main module.
 
-After building your library with `ng build ng16-rut`, go to the dist folder `cd dist/ng16-rut` and run `npm publish`.
+```typescript
+import { NgModule } from '@angular/core';
+import { Ng16Rut } from 'ng16-rut';
+import { BrowserModule } from '@angular/platform-browser';
 
-## Running unit tests
+@NgModule({
+  ...
+  imports: [
+    BrowserModule,
+    Ng16Rut
+  ],
+})
+class DemoAppModule { }
+```
 
-Run `ng test ng16-rut` to execute the unit tests via [Karma](https://karma-runner.github.io).
+See `./demo` folder for a fully working example.
 
-## Further help
+### Using it:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ng16-rut exposes multiple features that can be used to perform input validation and formatting. Probably you want to use one of the following:
+
+- `RutValidator`: Exposes the `validateRut` directive (to attach to models or inputs) and the RutValidator class to be used as `Validator` on reactive forms.
+- `RutPipe`: Exposes the `RutPipe` pipe to format rut numbers on templates
+- `RutDirective`: Exposes the `formatRut` directive to format RUT inputs.
+
+#### RutValidator
+
+##### Reactive forms
+
+```typescript
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+export class DemoAppComponent {
+  constructor (fb: FormBuilder, rutValidator: RutValidator) {
+    this.reactiveForm = fb.group({
+      rut: ['30972198', [Validators.required, rutValidator]]
+    });
+  }
+}
+
+```
+
+##### Template Form
+```html
+<input [(ngModel)]="user.rut" name="rut" validateRut required>
+```
+
+#### RutPipe
+
+```html
+{{ user.rut }}
+<!-- 30972198 -->
+{{ user.rut | rut }}
+<!-- 3.097.219-8 -->
+```
+
+#### formatRut (Directive)
+```html
+<input [(ngModel)]="user.rut" name="rut" formatRut required>
+<!--
+(on blur)
+3.097.219-8
+
+(on focus)
+30972198
+-->
+```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## Credits
+
+Thank you [contributors](https://github.com/odisleysi/ng16-rut/graphs/contributors)!
+
+<img src="https://avatars.githubusercontent.com/u/18350564?v=4" alt="Odisleysi" width="250"/>
+
+ng16-rut is maintained by [odisleysi](https://github.com/odisleysi).
+
+## License
+
+Angular 16 RUT is © 2023 GDExpress, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.

@@ -1,9 +1,9 @@
 {
-  "name": "ng15-rut",
-  "version": "0.0.1",
-  "description": "RUT for Angular 15",
-  "main": "dist/ng15-rut.module.js",
-  "types": "dist/ng15-rut.module.d.ts",
+  "name": "ng16-rut",
+  "version": "0.0.7",
+  "description": "RUT for Angular 16",
+  "main": "dist/ng16-rut.module.js",
+  "types": "dist/ng16-rut.module.d.ts",
   "files": [
     "dist",
     "README.md",
@@ -16,9 +16,12 @@
     "watch": "ng build --watch --configuration development",
     "demo:watch": "webpack-dev-server --progress --colors --watch --config webpack.demo.js",
     "demo:dist": "webpack --progress --colors --dist --config webpack.demo.js",
-    "build": "rm -rf dist && ngc",
-    "test": "karma start karma.conf.js",
-    "test:watch": "npm run test -- --auto-watch --no-single-run"
+    "build": "ng build",
+    "test": "ng test",
+    "test:watch": "npm run test -- --auto-watch --no-single-run",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build:lib": "ng-packagr -p projects//ng16-rut//ng-package.json && copy README.md dist//ng16-rut//README.md && copy LICENSE dist//ng16-rut//LICENSE"
   },
   "keywords": [
     "angular15",
@@ -26,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/odisleysi/ng15-rut"
+    "url": "https://github.com/odisleysi/ng16-rut"
   },
   "bugs": {
-    "url": "https://github.com/odisleysi/ng15-rut/issues"
+    "url": "https://github.com/odisleysi/ng16-rut/issues"
   },
   "author": "Odisleysi Martínez <odisleysi@gmail.com>",
   "contributors": [],
@@ -74,5 +77,5 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
-  "homepage": "https://github.com/odisleysi/ng15-rut#readme"
+  "homepage": "https://github.com/odisleysi/ng16-rut#readme"
 }

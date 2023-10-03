@@ -24,7 +24,7 @@ import { RutPipe } from './rut.pipe';
     RutValueAccessor,
   ],
   providers: [
-    RutValidator,
+    RutValidator
   ]
 })
-export class Ng16RutModule { }
+export class Ng16Rut { }

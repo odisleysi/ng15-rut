@@ -4,7 +4,7 @@ import { ReactiveFormsModule, FormsModule, FormControl, NgModel } from '@angular
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 import { RutValidator } from './rut.validator';
-import { newEvent } from '../testing';
+import { newEvent } from 'testing';
 
 describe('RutValidator: ReactiveForms', () => {
   beforeEach(() => {

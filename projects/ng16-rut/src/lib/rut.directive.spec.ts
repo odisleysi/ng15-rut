@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 import { RutDirective } from './rut.directive';
-import { newEvent } from '../testing';
+import { newEvent } from 'testing';
 
 @Component({
   template: `

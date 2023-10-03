@@ -15,7 +15,7 @@ npm install ng16-rut --save
 
 ### Set-up:
 
-The easiest way to use this library is to import Ng15Rut in your app's main module.
+The easiest way to use this library is to import Ng16Rut in your app's main module.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -26,7 +26,7 @@ import { BrowserModule } from '@angular/platform-browser';
   ...
   imports: [
     BrowserModule,
-    Ng15Rut
+    Ng16Rut
   ],
 })
 class DemoAppModule { }
@@ -94,7 +94,7 @@ export class DemoAppComponent {
 
 ## Credits
 
-Thank you [contributors](https://github.com/odisleysi/ng15-rut/graphs/contributors)!
+Thank you [contributors](https://github.com/odisleysi/ng16-rut/graphs/contributors)!
 
 <img src="https://avatars.githubusercontent.com/u/18350564?v=4" alt="Odisleysi" width="250"/>
 
@@ -102,4 +102,4 @@ ng16-rut is maintained by [odisleysi](https://github.com/odisleysi).
 
 ## License
 
-Angular 15 RUT is © 2023 GDExpress, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
+Angular 16 RUT is © 2023 GDExpress, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
