@@ -1,7 +1,7 @@
 Angular 2 RUT
 =============
 
-Angular 16 library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
+Angular 16+ library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.
 
 ## Installation
 
@@ -102,4 +102,4 @@ ng16-rut is maintained by [odisleysi](https://github.com/odisleysi).
 
 ## License
 
-Angular 16 RUT is © 2023 GDExpress, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
+Angular 16+ RUT is © 2023 GDExpress, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
