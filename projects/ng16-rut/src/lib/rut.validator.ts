@@ -1,10 +1,18 @@
 import { Directive, forwardRef } from '@angular/core';
-import { NG_VALIDATORS, FormControl } from '@angular/forms';
+import { NG_VALIDATORS, AbstractControl } from '@angular/forms';
 import { rutValidate } from 'rut-helpers';
 
-export function validateRutFactory(rutValidate: Function) {
-  return (c: FormControl) => {
-    return rutValidate(c.value) ? null : { invalidRut: true };
+type ValidationErrors = {
+  [key: string]: any;
+};
+
+interface ValidatorFn {
+  (control: AbstractControl): ValidationErrors | null
+}
+
+export function validateRutFactory(rutValidate: Function): ValidatorFn {
+  return (c: AbstractControl): ValidatorFn => {
+    return (rutValidate(c.value) ? null : { invalidRut: true } as ValidationErrors) as ValidatorFn;
   };
 }
 
@@ -21,7 +29,7 @@ export class RutValidator {
     this.validator = validateRutFactory(rutValidate);
   }
 
-  public validate(c: FormControl) {
+  public validate(c: AbstractControl): ValidatorFn {
     return this.validator(c);
   }
 }
