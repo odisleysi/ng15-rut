@@ -1,0 +1,14 @@
+{
+  "name": "ng16-rut",
+  "version": "0.0.9",
+  "peerDependencies": {
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/forms": "^16.0.0",
+    "@angular/platform-browser": "^16.0.0",
+    "rut-helpers": "^0.1.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

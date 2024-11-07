@@ -1,4 +1,4 @@
-Angular 15 RUT
+Angular 16+ RUT
 =============
 
 Angular 16+ library with several components to handle [Chilean RUT](https://en.wikipedia.org/wiki/National_identification_number#Chile) validation, cleaning and formatting.

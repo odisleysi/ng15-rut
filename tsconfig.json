@@ -5,17 +5,22 @@
     "module": "ES2022",
     "target": "ES2022",
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "moduleResolution": "node",
     "declaration": false,
     "baseUrl": "./",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "paths": {
+      "ng16-rut": [
+        "dist/ng16-rut"
+      ]
+    },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "downlevelIteration": true,
     "importHelpers": true,
     "useDefineForClassFields": false,
     "outDir": "./dist/out-tsc",

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RutValidator } from '../ng15-rut/rut.validator';
+import { RutValidator } from 'projects/ng16-rut/src/public-api';
 import { User } from '../user';
 
 @Component({

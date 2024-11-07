@@ -2,11 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DemoComponent } from './demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RutValidator } from '../ng15-rut/rut.validator';
-import { Ng15Rut } from '../ng15-rut/ng15-rut.module';
+import { Ng16Rut, RutValidator } from 'projects/ng16-rut/src/public-api';
 import { DemoRoutingModule } from './demo-routing.module';
-
-
 
 @NgModule({
   declarations: [
@@ -18,7 +15,7 @@ import { DemoRoutingModule } from './demo-routing.module';
     FormsModule,
     ReactiveFormsModule,
     DemoRoutingModule,
-    Ng15Rut
+    Ng16Rut
   ]
 })
 export class DemoModule { }
