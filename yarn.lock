@@ -1323,10 +1323,10 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@ng-select/ng-select@^10.0.4":
-  version "10.0.4"
-  resolved "https://registry.npmjs.org/@ng-select/ng-select/-/ng-select-10.0.4.tgz"
-  integrity sha512-Vc/JIgcFkSgf47cX7+pQQo9HYhDktfqrY7o/ZPGMvu63P7E9d1MibVipqmcLbgms6Ac9lu621CDZPGHdxag7hA==
+"@ng-select/ng-select@^13.9.1":
+  version "13.9.1"
+  resolved "https://gde-packages-domain-987135819764.d.codeartifact.us-east-1.amazonaws.com/npm/npm-store/@ng-select/ng-select/-/ng-select-13.9.1.tgz"
+  integrity sha512-+DzQkQp8coGWZREflJM/qx7BXipV6HEVpZCXoa6fJJRHJfmUMsxa5uV6kUVmClUE98Rkffk9CPHt6kZcj8PuqQ==
   dependencies:
     tslib "^2.3.1"
 
